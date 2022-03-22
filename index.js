@@ -39,6 +39,8 @@ function printAllMovies() {
 
 // 3. Return an array of all Beyonce's hit song titles
 function hitSongTitles() {
+  const songTitles = beyonceHash.hits.map(hit => hit.title)
+  return songTitles
 }
 
 // 4. Return an array of all Beyonce's fierceness ratings
