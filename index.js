@@ -92,6 +92,8 @@ function findBlondeHit() {
 
 // 10. Return the hit song "Sorry"
 function sorry() {
+  const songSorry = beyonceHash.hits.find(hit => hit.title === 'Sorry')
+  return songSorry
 }
 
 // 11. Return a given song
