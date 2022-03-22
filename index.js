@@ -132,6 +132,12 @@ function hitFiercenessAverage() {
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
+  const movieRatings = beyonceHash.movies.map(movie => movie.rating)
+  let sum = 0
+  for (let i = 0; i < movieRatings.length; i++){
+    sum += movieRatings[i]
+  }
+  console.log(sum)
 }
 
 // 16. Return the average rating value for all of her movies
