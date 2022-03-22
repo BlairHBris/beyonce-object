@@ -142,6 +142,13 @@ function ratingSum() {
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
+  const movieRatings = beyonceHash.movies.map(movie => movie.rating)
+  let sum = 0
+  for (let i = 0; i < movieRatings.length; i++){
+    sum += movieRatings[i]
+  }
+  let average = sum /movieRatings.length
+  console.log(average)
 }
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
