@@ -111,6 +111,12 @@ function fiercestHits() {
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
 function hitFiercenessSum() {
+  const fierceRatings = beyonceHash.hits.map(hit => hit.fierceness)
+  let sum = 0
+  for (let i = 0; i < fierceRatings.length; i++){
+    sum += fierceRatings[i]
+  }
+  console.log(sum)
 }
 
 // 14. Return the average fierceness value for all Beyonce's hit songs
