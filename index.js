@@ -27,6 +27,8 @@ const beyonceHash = {
 
 // 1. Print all the songs
 function printAllSongs() {
+  const songTitles = beyonceHash.hits.map(hit => hit.title)
+  console.log(songTitles)
 }
 
 // 2. Print all the movies
