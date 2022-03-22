@@ -116,7 +116,7 @@ function hitFiercenessSum() {
   for (let i = 0; i < fierceRatings.length; i++){
     sum += fierceRatings[i]
   }
-  console.log(sum)
+  return sum 
 }
 
 // 14. Return the average fierceness value for all Beyonce's hit songs
@@ -127,7 +127,7 @@ function hitFiercenessAverage() {
     sum += fierceRatings[i]
   }
   let average = sum /fierceRatings.length
-  console.log(average)
+  return average
 }
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
@@ -137,7 +137,7 @@ function ratingSum() {
   for (let i = 0; i < movieRatings.length; i++){
     sum += movieRatings[i]
   }
-  console.log(sum)
+  return sum 
 }
 
 // 16. Return the average rating value for all of her movies
@@ -148,7 +148,7 @@ function ratingAverage() {
     sum += movieRatings[i]
   }
   let average = sum /movieRatings.length
-  console.log(average)
+  return average
 }
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
@@ -158,7 +158,7 @@ function hitDancerSum() {
   for (let i = 0; i < dancersIn.length; i++){
     sum += dancersIn[i]
   }
-  console.log(sum)
+  return sum 
 }
 
 // 18. Return an array of Beyonce's hairstyles without repeats
