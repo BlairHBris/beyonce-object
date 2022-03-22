@@ -153,6 +153,12 @@ function ratingAverage() {
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
 function hitDancerSum() {
+  const dancersIn = beyonceHash.hits.map(hit => hit.dancers)
+  let sum = 0
+  for (let i = 0; i < dancersIn.length; i++){
+    sum += dancersIn[i]
+  }
+  console.log(sum)
 }
 
 // 18. Return an array of Beyonce's hairstyles without repeats
