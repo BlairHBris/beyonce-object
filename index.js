@@ -97,7 +97,9 @@ function sorry() {
 }
 
 // 11. Return a given song
-function getSong() {
+function getSong(title) {
+  const song =  beyonceHash.hits.find(hit => hit.title == title)
+  return song
 }
 
 // 12. Return all hit songs where Beyonce's fierceness rating is 10
