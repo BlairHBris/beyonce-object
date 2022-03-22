@@ -45,6 +45,8 @@ function hitSongTitles() {
 
 // 4. Return an array of all Beyonce's fierceness ratings
 function allFiercenessRatings() {
+  const fiercenessRatings = beyonceHash.hits.map(hit => hit.fierceness)
+  return fiercenessRatings
 }
 
 // 5. Return all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
