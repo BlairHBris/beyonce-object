@@ -78,6 +78,9 @@ function getMoviesByDateGTE(year) {
 
 // 8. Return all hit songs where Beyonce was in a group
 function groupHits() {
+  const groups = beyonceHash.hits.filter(hit => hit.group_name !== 'none')
+  const groupsFinal = groups.map(hit => hit.title)
+  return groupsFinal
 }
 
 // 9. Return a hit song where Beyonce's hair is blonde
