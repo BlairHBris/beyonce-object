@@ -104,6 +104,9 @@ function getSong(title) {
 
 // 12. Return all hit songs where Beyonce's fierceness rating is 10
 function fiercestHits() {
+  const fiercest = beyonceHash.hits.filter(hit => hit.fierceness === 10)
+  const fiercestFinal = fiercest.map(hit => hit.title)
+  return fiercestFinal
 }
 
 // 13. Return the sum of Beyonce's fierceness value for all of her hit songs
