@@ -64,10 +64,16 @@ function songsWithBodySuits() {
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
 function getSongsByFiercenessGTE(num) {
+  const fierceRating = beyonceHash.hits.filter(hit => hit.fierceness >= num)
+  const fierceRatingFinal = fierceRating.map(hit => hit.title)
+  return fierceRatingFinal
 }
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
-function getMoviesByDateGTE() {
+function getMoviesByDateGTE(year) {
+  const movieByYear = beyonceHash.movies.filter(movie => movie.year >= year)
+  const movieByYearFinal = movieByYear.map(movie => movie.title)
+  return movieByYearFinal
 }
 
 // 8. Return all hit songs where Beyonce was in a group
