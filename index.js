@@ -170,9 +170,23 @@ function uniqueHairstyles() {
 }
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
-function songFiercenessByName() {
-  const nameAndRatings = beyonceHash.hits.map(hit => hit.title && hits.fierceness)
-  return nameAndRatings
+function songFiercenessByName(title) {
+  const fierceRatings = beyonceHash.hits.map(hit => hit.fierceness)
+  let sum = 0
+  for (let i = 0; i < fierceRatings.length; i++){
+    sum += fierceRatings[i]
+  }
+  let average = sum /fierceRatings.length
+  const nameAndRatings = beyonceHash.hits.map(hit => {
+    return{
+      title: hit.title,
+      fierceness: hit.fierceness,
+      average: average,
+    }
+  }) 
+  const singleNameAndRating = nameAndRatings.find(hit => hit.title === title)
+  const objSingleNameAndRating = Object.assign(singleNameAndRating)
+  return objSingleNameAndRating
 }
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
