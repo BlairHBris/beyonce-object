@@ -85,6 +85,9 @@ function groupHits() {
 
 // 9. Return a hit song where Beyonce's hair is blonde
 function findBlondeHit() {
+  const blonde = beyonceHash.hits.filter(hit => hit.hair.includes("blonde"))
+  const blondeTitle = blonde.map(hit => hit.title)
+  return blondeTitle[0]
 }
 
 // 10. Return the hit song "Sorry"
