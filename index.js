@@ -33,6 +33,8 @@ function printAllSongs() {
 
 // 2. Print all the movies
 function printAllMovies() {
+  const movieTitles = beyonceHash.movies.map(movie => movie.title)
+  console.log(movieTitles)
 }
 
 // 3. Return an array of all Beyonce's hit song titles
