@@ -163,6 +163,10 @@ function hitDancerSum() {
 
 // 18. Return an array of Beyonce's hairstyles without repeats
 function uniqueHairstyles() {
+  const hairstyles = beyonceHash.hits.map(hit => hit.hair)
+  const merged = [].concat.apply([], hairstyles)
+  const noDups = [...new Set(merged)]
+  return noDups  
 }
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
