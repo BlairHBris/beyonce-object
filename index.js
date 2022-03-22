@@ -171,6 +171,8 @@ function uniqueHairstyles() {
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
 function songFiercenessByName() {
+  const nameAndRatings = beyonceHash.hits.map(hit => hit.title && hits.fierceness)
+  return nameAndRatings
 }
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
@@ -179,4 +181,10 @@ function movieRatingsByName() {
 
 // 21. Return an object with Beyonce's hairstyles as the keys and a tally of each hairstyle, eg. `{ "blonde": 3, ... }`
 function hairStyleFrequency() {
+  const hairstyles = beyonceHash.hits.map(hit => hit.hair)
+  const merged = [].concat.apply([], hairstyles)
+  const hairCount = merged.reduce(function (acc, curr){
+    return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+  }, {})
+  return hairCount
 }
