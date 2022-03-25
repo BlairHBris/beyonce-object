@@ -172,8 +172,7 @@ function songFiercenessByName(title) {
       averageFierceness: average,
     }
   }) 
-  const singleNameAndRating = nameAndRatings.find(hit => hit.title === title)
-  return Object.assign(singleNameAndRating)
+  return nameAndRatings.find(hit => hit.title === title)
 }
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
@@ -191,8 +190,7 @@ function movieRatingsByName(title) {
       averageRating: average,
     }
   }) 
-  const singleNameAndRating = nameAndRatings.find(movie => movie.title === title)
-  return Object.assign(singleNameAndRating)
+  return nameAndRatings.find(movie => movie.title === title)
 }
 
 // 21. Return an object with Beyonce's hairstyles as the keys and a tally of each hairstyle, eg. `{ "blonde": 3, ... }`
