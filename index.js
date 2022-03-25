@@ -145,7 +145,7 @@ function hitDancerSum() {
 // 18. Return an array of Beyonce's hairstyles without repeats
 function uniqueHairstyles() {
   const hairstyles = beyonceHash.hits.map(hit => hit.hair)
-  const merged = [].concat.apply([], hairstyles) //Combines all hairstyles into one array
+  const merged = [].concat.apply([], hairstyles) //Combines all hairstyles into one array so that the next line can remove duplicates 
   return [...new Set(merged)]  
 }
 
