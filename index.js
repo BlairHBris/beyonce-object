@@ -57,8 +57,8 @@ function songsWithBodySuits() {
 }
 
 // 6. Return an array with all of the songs where Beyonce's fierceness is greater than or equal to a given number
-function getSongsByFiercenessGTE(num) {
-  return beyonceHash.hits.filter(hit => hit.fierceness >= num)
+function getSongsByFiercenessGTE(fiercenessNumber) {
+  return beyonceHash.hits.filter(hit => hit.fierceness >= fiercenessNumber)
 }
 
 // 7. Return an array with all of the movies Beyonce made after or during a given year
@@ -181,8 +181,8 @@ function movieRatingsByName(title) {
 function hairStyleFrequency() {
   const hairstyles = beyonceHash.hits.map(hit => hit.hair)
   const merged = [].concat.apply([], hairstyles)
-  const hairCount = merged.reduce(function (acc, curr){
-    return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+  const hairCount = merged.reduce(function (hairstyle, currentCount){
+    return hairstyle[currentCount] ? ++hairstyle[currentCount] : hairstyle[currentCount] = 1, hairstyle
   }, {})
   return hairCount
 }
